@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { projectAuth } from '../firebase/config'
 import { useAuthContext } from './useAuthContext'
 
 export const useSignup = () => {
+  const [cancel, setCancel] = useState(false)
   const [error, setError] = useState(null)
   const [pending, setPending] = useState(false)
   const { dispatch } = useAuthContext()
@@ -20,18 +21,27 @@ export const useSignup = () => {
       if (!res) {
         throw new Error('could not complete signup')
       }
-      //   add display name to user
+      //   add display name to user using dispatch
       await res.user.updateProfile({ displayName })
       dispatch({ type: 'LOGIN', payload: res.user })
 
-      setPending(false)
-      setError(null)
+      if (!cancel) {
+        //   update state
+        setError(null)
+        setPending(false)
+      }
     } catch (err) {
-      console.log(err.message)
-      setError(err.message)
-      setPending(false)
+      if (!cancel) {
+        setError(true)
+        setPending(false)
+        console.log(err.message)
+      }
     }
   }
-
+  useEffect(() => {
+    return () => {
+      setCancel(true)
+    }
+  }, [])
   return { error, pending, signup }
 }
