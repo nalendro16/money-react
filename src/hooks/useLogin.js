@@ -18,15 +18,15 @@ export function useLogin() {
       console.log(res.user)
       //   unsub manually
       if (!cancel) {
-        setError(false)
+        setError(null)
         setPending(false)
       }
     } catch (err) {
       // unsub manually
       if (!cancel) {
         console.log(err.message)
-        setError(true)
-        setPending(true)
+        setError(err.message)
+        setPending(false)
       }
     }
   }
