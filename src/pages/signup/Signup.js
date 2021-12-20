@@ -20,6 +20,7 @@ export default function Signup() {
       <label>
         <span>Name:</span>
         <input
+          required
           type="text"
           onChange={(e) => setDisplayName(e.target.value)}
           value={displayName}
@@ -44,7 +45,7 @@ export default function Signup() {
       {!pending && <button className="btn">Signup</button>}
       {pending && (
         <button className="btn" disabled>
-          Loading
+          Loading...
         </button>
       )}
       {error && <p>{error}</p>}
