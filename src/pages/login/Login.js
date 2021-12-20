@@ -35,7 +35,7 @@ export default function Login() {
       {!pending && <button className="btn">Login</button>}
       {pending && (
         <button className="btn" disabled>
-          Loadings
+          Loading...
         </button>
       )}
       {error && <p>{error}</p>}
