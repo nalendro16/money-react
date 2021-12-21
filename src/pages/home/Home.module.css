@@ -12,7 +12,7 @@
 }
 .sidebar form {
   padding: 20px;
-  background: #1f9751;
+  background: #39a2db;
   border-radius: 10px;
 }
 .sidebar input,
@@ -44,7 +44,7 @@
   width: 100%;
 }
 .sidebar h3 {
-  color: #1f9751;
+  color: #39a2db;
   margin-bottom: 20px;
 }
 .sidebar aside {
