@@ -31,6 +31,9 @@ export const useCollection = (collection, _query, _orderBy) => {
       },
       (error) => {
         //   throw new error without try catch
+        // if (lenth === 0) {
+        //   setError('Your record still empty')
+        // }
         console.log(error)
         setError('could not fetch the data')
       }

@@ -11,7 +11,7 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <ul>
         <li className={styles.title}>
-          <Link to="/">moneyReact</Link>
+          <Link to="/">MOneyReact</Link>
         </li>
         {!user && (
           <>

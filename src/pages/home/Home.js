@@ -11,10 +11,12 @@ export default function Home() {
     ['uid', '==', user.uid],
     ['addedAt', 'desc']
   )
+  console.log(documents)
   return (
     <div className={styles.container}>
       <div className={styles.content}>
         {error && <p>{error}</p>}
+        {documents === 0 && <p>Still empty</p>}
         {documents && <TransactionList transactions={documents} />}
       </div>
       <div className={styles.sidebar}>
