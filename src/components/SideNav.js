@@ -27,7 +27,9 @@ export default function SideNav() {
           </button>
           <Link to="/">Expense</Link>
           <Link to="/finplan">Financial Plan</Link>
+          <Link to="#">Report</Link>
         </ul>
+        <div className={styles.settingbtn}>Setting</div>
       </nav>
     </div>
   )

@@ -14,31 +14,45 @@ export default function Login() {
   }
 
   return (
-    <form className={styles['login-form']} onSubmit={handleSubmit}>
-      <h2>Login</h2>
-      <label>
-        <span>Email:</span>
-        <input
-          type="email"
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-        />
-      </label>
-      <label>
-        <span>Password:</span>
-        <input
-          type="password"
-          onChange={(e) => setPassword(e.currentTarget.value)}
-          value={password}
-        />
-      </label>
-      {!pending && <button className="btn">Login</button>}
-      {pending && (
-        <button className="btn" disabled>
-          Loading...
-        </button>
-      )}
-      {error && <p>{error}</p>}
-    </form>
+    <div className={styles.login}>
+      <div className={styles.description}>
+        <h2>So, You Need to login!</h2>
+        <p>This is why you need to choose us:</p>
+        <ol>
+          <li>We Can save your expanses record</li>
+          <li>You can review a report of your expenses</li>
+          <li>
+            Need to revisite your expense? no need to worry the delete fitures
+            was added
+          </li>
+        </ol>
+      </div>
+      <form className={styles['login-form']} onSubmit={handleSubmit}>
+        <h2>Login</h2>
+        <label>
+          <span>Email:</span>
+          <input
+            type="email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+          />
+        </label>
+        <label>
+          <span>Password:</span>
+          <input
+            type="password"
+            onChange={(e) => setPassword(e.currentTarget.value)}
+            value={password}
+          />
+        </label>
+        {!pending && <button className="btn">Login</button>}
+        {pending && (
+          <button className="btn" disabled>
+            Loading...
+          </button>
+        )}
+        {error && <p>{error}</p>}
+      </form>
+    </div>
   )
 }
