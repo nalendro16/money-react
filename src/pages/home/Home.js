@@ -11,7 +11,16 @@ export default function Home() {
     ['uid', '==', user.uid],
     ['addedAt', 'desc']
   )
-  console.log(documents)
+
+  // mengambil data tanggal input dan amount
+  console.log(
+    documents &&
+      documents.map((doc) => {
+        let time = doc.addedAt
+        return time.toDate().toDateString() + ' expense: ' + doc.amount
+      })
+  )
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>

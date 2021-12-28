@@ -41,7 +41,7 @@
   font-size: 25px;
   color: #818181;
   display: flex;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 .sidenav a:hover {
   color: #c7c7c7;
