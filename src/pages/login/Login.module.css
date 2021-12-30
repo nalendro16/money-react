@@ -1,3 +1,19 @@
+.login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.description {
+  width: 80vh;
+  margin: 20vh auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 30px 0;
+  box-shadow: 8px 13px 3px #39a2db;
+}
+.description li {
+  margin: 5px 20px;
+  text-align: left;
+}
 .login-form {
   max-width: 360px;
   margin: 60px auto;
@@ -16,4 +32,17 @@
   font-size: 1em;
   color: #777;
   width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .login {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .description {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .login-form {
+    margin: 20px auto;
+  }
 }

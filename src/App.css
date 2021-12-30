@@ -28,6 +28,21 @@
   color: #61dafb;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(155, 155, 155);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(95, 95, 95);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

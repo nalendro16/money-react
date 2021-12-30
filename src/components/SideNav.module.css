@@ -1,11 +1,11 @@
 .sidenav {
-  height: 100%;
+  height: 100vh;
   width: 250px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #f2f2f2;
   transition: 0.5s;
   padding-top: 160px;
 }
@@ -15,10 +15,9 @@
   top: 0;
   right: 0;
   cursor: pointer;
-  padding: 20px;
+  padding: 15px;
   font-size: 24px;
   border: none;
-  background-color: #111;
   color: #818181;
 }
 
@@ -41,7 +40,7 @@
   font-size: 25px;
   color: #818181;
   display: flex;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 .sidenav a:hover {
   color: #c7c7c7;
@@ -49,12 +48,36 @@
 
 .openbtn {
   position: fixed;
-  top: 60px;
-  left: 20px;
+  top: 10vh;
+  left: 5vh;
   cursor: pointer;
-  padding: 10px;
+  padding: 5px;
   font-size: 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 3px;
   color: #111;
+}
+.openbtn:hover {
+  box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.09);
+}
+.settingbtn {
+  position: absolute;
+  margin-top: 42vh;
+  bottom: 10;
+  left: 0;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 24px;
+  border: none;
+  color: #818181;
+  transition: 0.3s;
+}
+.settingbtn:hover {
+  color: rgb(44, 44, 44);
+}
+
+@media only screen and (max-width: 768px) {
+  .openbtn {
+    left: 2vh;
+  }
 }

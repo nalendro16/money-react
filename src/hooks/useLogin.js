@@ -15,7 +15,7 @@ export function useLogin() {
       const res = await projectAuth.signInWithEmailAndPassword(email, password)
       //   dispatch
       dispatch({ type: 'LOGIN', payload: res.user })
-      console.log(res.user)
+      // console.log(res.user)
       //   unsub manually
       if (!cancel) {
         setError(null)
