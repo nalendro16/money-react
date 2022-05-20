@@ -1,6 +1,9 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2. By using of firebase i can focus practicing my knowledge in Front End Development especialy React JS
+3. You can use this website for your own expense tracker app
+4. I still want to develop more feature like, shorted expenses, add financial plan feature and maybe migrating to tailwind css.
 
 ## Its actual project so you can visit on
 
